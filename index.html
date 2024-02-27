@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Space</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <nav class="main-header__nav">
+          <a class="main-header__nav-logo" href="#" aria-label="Наш шикарный логотип"></a>
+          <section class="main-header__contacts">
+            <a class="main-header__link main-header__link--phone" href="tel:8 800 000 00 00"></a>
+            <a class="main-header__link main-header__link--mail" href="mailto:sales@logo.ru"></a>
+          </section>
+        </nav>
+      </div>
+    </header>
+    <article class="intro">
+      <div class="container">
+        <h1 class="intro__title">Как бизнесу сохранять<br> IT-кадры на фоне кризиса</h1>
+        <p class="intro__description">Инструменты, которые могут использовать компании для удержания сотрудников</p>
+        <a class="intro__link" href="#">Подробнее</a>
+      </div>
+    </article>
+    <section class="posts">
+      <div class="container">
+        <form class="posts__filter-form" id="filter-form">
+          <select class="posts__select-author" name="authors">
+            <option value="">Выбор автора</option>
+          </select>
+          <fieldset class="posts__dates">
+            <select class="posts__date posts__date--min" name="min-date"></select>
+            <select class="posts__date posts__date--max" name="max-date"></select>
+          </fieldset>
+          <template id="option">
+            <option value="">Автор или дата</option>
+          </template>
+        </form>
+        <p class="posts__info-title">Чтобы увидеть посты, выберите автора или дату.</p>
+        <ul class="posts__post-list">
+          <template id="post">
+            <li class="posts__post-item">
+              <time class="posts__date" datetime="12.06.2022">12 июня 2022</time>
+              <h3 class="posts__title">Заголовок статьи</h3>
+              <p class="posts__description">Краткое описание статьи или ее начало. Может занимать больше трех строк в высоту. В такой случае, предложение заканчивается многоточием...</p>
+              <p class="posts__author">Иван Иванов</p>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="container">
+        <section class="main-footer__info">
+          <a class="main-footer__logo" href="#" aria-label="Снова наш шикарный логотип, только уже в подвале"></a>
+          <ul class="main-footer__list main-footer__list--pages">
+            <li class="main-footer__item"><a class="main-footer__link main-footer__link--page" href="#">Готовые решения</a></li>
+            <li class="main-footer__item"><a class="main-footer__link main-footer__link--page" href="#">Блог</a></li>
+            <li class="main-footer__item"><a class="main-footer__link main-footer__link--page" href="#">О нас</a></li>
+            <li class="main-footer__item"><a class="main-footer__link main-footer__link--page" href="#">Контакты</a></li>
+          </ul>
+          <ul class="main-footer__list main-footer__list--socials"> 
+            <li><a class="main-footer__link main-footer__link--social main-footer__link--tg" href="#" aria-label="Мы в Телеграме"></a></li>
+            <li><a class="main-footer__link main-footer__link--social main-footer__link--vk" href="#" aria-label="Мы в ВК"></a></li>
+            <li><a class="main-footer__link main-footer__link--social main-footer__link--twitter" href="#" aria-label="Мы в Твиттере"></a></li>
+            <li><a class="main-footer__link main-footer__link--social main-footer__link--youtube" href="#" aria-label="Мы на Ютубе"></a></li>
+          </ul>
+          <p class="main-footer__copyright">© ООО «Лого», 2008—2022</p>
+        </section>
+      </div>
+    </footer>
+    <script type="module" src="/src/js/index.js"></script>
+  </body>
+</html>

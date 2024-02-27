@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: $grey;
+  min-width: $mobile;
+  min-height: 100vh;
+
+  @media (min-width: $tablet) {
+    font-size: 19px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $pre-desktopPlus) {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $large) {
+    font-size: 28px;
+    line-height: 31px;
+  }
+}

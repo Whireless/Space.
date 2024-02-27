@@ -1,0 +1,96 @@
+.main-header {
+  background-color: $white;
+  padding: 16px 0;
+
+  @media (min-width: $large) {
+    padding: 29px 0;
+  }
+}
+
+.main-header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header__nav-logo {
+  display: block;
+  width: 97px;
+  height: 24px;
+  background-image: url("/src/icons/logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $tablet) {
+    width: 140px;
+    height: 40px;
+  }
+}
+
+.main-header__contacts {
+  display: flex;
+  column-gap: 16px;
+
+  @media (min-width: $tablet) {
+    column-gap: 30px;
+  }
+}
+
+.main-header__link {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &--phone {
+    background-image: url("/src/icons/phone.svg");
+  }
+
+  &--mail {
+    background-image: url("/src/icons/mail.svg");
+  }
+
+  @media (min-width: $tablet) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+    color: $grey2;
+    text-decoration: none;
+    position: relative;
+    width: auto;
+    background-image: none;
+
+    &::before {
+      position: absolute;
+      width: max-content;
+    }
+
+    &--phone {
+      &::before {
+        content: "8 800 000 00 00";
+        left: -265px;
+      }
+    }
+
+    &--mail {
+      &::before {
+        content: "sales@logo.ru";
+        left: -125px;
+      }
+    }
+  }
+}

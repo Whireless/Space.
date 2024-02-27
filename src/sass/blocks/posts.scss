@@ -1,0 +1,199 @@
+.posts {
+  margin-top: 32px;
+  margin-bottom: 56px;
+}
+
+.posts__filter-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $pre-desktopPlus) {
+    justify-content: start;
+    column-gap: 20px;
+  }
+}
+
+.posts__select-author {
+  color: $grey2;
+  height: 50px;
+  background-color: $white;
+  padding: 0 16px 0 44px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-image: url("/src/icons/user.svg");
+  background-repeat: no-repeat;
+  background-position: 16px 16px;
+
+  @media (min-width: $pre-desktopPlus) {
+    width: 335px;
+    height: 52px;
+  }
+}
+
+.posts__dates {
+  font-size: 13px;
+  color: $grey2;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 15px;
+  background-color: $white;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 14px;
+  }
+
+  &::before {
+    content: "От";
+  }
+
+  &::after {
+    content: "До";
+    right: 110px;
+  }
+
+  @media (min-width: $tablet) {
+    column-gap: 50px;
+    padding: 14px;
+
+    &::before,
+    &::after {
+      top: 10px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::before,
+    &::after {
+      top: 9px;
+    }
+  }
+
+  @media (min-width: $pre-desktopPlus) {
+    width: 335px;
+    padding: 18px;
+
+    &::before,
+    &::after {
+      top: 11px;
+    }
+  }
+
+  @media (min-width: $large) {
+    &::before,
+    &::after {
+      top: 10px;
+    }
+  }
+}
+
+.posts__date {
+  font-size: 12px;
+  color: $lightblue;
+  position: relative;
+  display: block;
+  width: 85px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--min {
+    margin-left: 25px;
+  }
+
+  @media (min-width: $pre-desktopPlus) {
+    width: 89px;
+    
+  }
+}
+
+.posts__info-title {
+  text-align: center;
+  width: fit-content;
+  margin: 20px auto 0 auto;
+
+  @media (min-width: $tablet) {
+    margin: 30px auto 0 auto;
+  }
+
+  @media (min-width: $pre-desktopPlus) {
+    margin: 50px auto 0 auto;
+  }
+}
+
+.posts__post-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-top: 32px;
+  list-style: none;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+  }
+
+  @media (min-width: $pre-desktopPlus) {
+    gap: 20px;
+    min-width: 1080px;
+    margin: 32px auto 0 auto;
+  }
+}
+
+.posts__post-item {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 20px;
+  border-radius: 10px;
+
+  @media (min-width: $desktop) {
+    font-size: 14px;
+    width: 350px;
+  }
+
+  @media (min-width: $pre-desktopPlus) {
+    font-size: 15px;
+    width: 490px;
+  }
+
+  @media (min-width: $large) {
+    font-size: 17px;
+    width: 532px;
+  }
+}
+
+.posts__title {
+  margin: 8px 0 16px 0;
+}
+
+.posts__description {
+  font-weight: 300;
+  color: $grey2;
+}
+
+.posts__author {
+  font-size: 14px;
+  font-weight: 500;
+  color: $blue;
+  background-color: $blueBG;
+  width: max-content;
+  margin-top: 20px;
+  padding: 8px 20px;
+  border-radius: 10px;
+}
